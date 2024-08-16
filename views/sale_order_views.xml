@@ -1,0 +1,31 @@
+<odoo>
+    <record id="order_form_inherit_id" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='order_lines']" position="before">
+                <page string="Order History" name="order_history_name">
+                    <field name="limited_order_history_ids">
+                        <tree class="o_sale_order" string="Sales Orders" editable="bottom">
+                            <field name="order_number"/>
+                            <field name="order_date"/>
+                            <field name="order_product"/>
+                            <field name="order_price"/>
+                            <field name="order_quantity"/>
+                            <field name="order_unit"/>
+                            <field name="order_discount"/>
+                            <field name="order_sub_total"/>
+                            <field name="order_status" widget="badge"/>
+                            <button name="button_history_add_to_order"
+                                    type="object"
+                                    string="RE-ORDER"
+                                    class="oe_highlight"
+                                    title="Add selected products to order lines"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
