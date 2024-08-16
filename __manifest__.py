@@ -23,8 +23,8 @@ It used to display a page that contains the customer's previous order.
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizard/res_config_settings_views.xml',
         'views/sale_order_views.xml',
-        'views/res_config_settings_views.xml',
     ],
     "application": True,
     "sequence": -93,
