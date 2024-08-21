@@ -17,7 +17,7 @@
                         <field name="stages" widget="selection"/>
                     </setting>
                     <setting id="enable_recorder_setting" string="Enable Reorder" help="Enable reorder functionality">
-                        <field name="enable_recorder" widget="radio"/>
+                        <field name="enable_recorder"/>
                     </setting>
                 </block>
             </xpath>
